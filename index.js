@@ -40,9 +40,14 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function as the second parameter that will take getFinals from task 2 as an argument
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(/* code here */) {
-    /* code here */
+function getYears(array, cbfunc) {
+    const finalYears = cbfunc(array).filter((element) => {
+        return element.Year;
+    });
+    return finalYears
 }
+
+console.log(getYears(fifaData, getFinals));
 
 
 
