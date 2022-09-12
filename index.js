@@ -59,7 +59,7 @@ Use the higher-order function getWinners to do the following:
 4. Returns the names of all winning countries in an array called `winners` */ 
 
 function getWinners(array, cbfunc) {
-    const winners = cbfunc(array).filter((element) => {
+    const winners = cbfunc(array).map((element) => {
         if (element["Home Team Goals"] > element["Away Team Goals"]) {
             return element["Home Team Name"];
         } else {
