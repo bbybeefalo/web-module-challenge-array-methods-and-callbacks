@@ -87,7 +87,7 @@ Use the higher-order function getWinnersByYear to do the following:
 function getWinnersByYear(array, cbFinals, cbYear, cbWinner) {
     const winnerInfo = [];
     for (let i = 0; i < cbFinals(array).length; i++) {
-        winnerInfo.push(`In year ${cbYear(array, cbFinals)[i]}, ${cbWinner(array, cbFinals)[i]} won the world cup!`);
+        winnerInfo.push(`In ${cbYear(array, cbFinals)[i]}, ${cbWinner(array, cbFinals)[i]} won the world cup!`);
     };
     return winnerInfo;
 }
